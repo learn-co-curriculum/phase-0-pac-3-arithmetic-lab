@@ -6,7 +6,7 @@ const path = require('path')
 
 describe('index', () => {
   jsdom({
-    src: fs.readFileSync(path.resolve(__dirname, '..', 'index.solution.js'), 'utf-8')
+    src: fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8')
   })
 
   var a, b
