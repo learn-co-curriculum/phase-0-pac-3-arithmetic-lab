@@ -11,6 +11,8 @@ JavaScript Arithmetic Lab
 
 In this lab, we're going to practice writing functions and manipulating numbers in JavaScript. First, though, we need to go over some basic math. In this lab, we're going to learn about various arithmetic operators. What's an operator, you say? It's a symbol that _operates_ on one or more (usually two) objects — `+` is a good example. The `+` operator says "add what's to the left of `+` and what's to the right of `+` together." Easy-peasy!
 
+As you read through this lesson, you're going to be adding your solutions to `index.js`. You'll write a total of eight functions; use the results of running `learn test` in your IDE to guide you towards the right function names and functionality.
+
 ## Basic Math
 
 The most fundamental math operations work as one might expect in JavaScript: `+` adds two numbers; `-` subtracts one number from another; `*` multiplies two numbers; and `/` divides one number by another. For example (as usual, follow along in console!)
@@ -22,7 +24,7 @@ The most fundamental math operations work as one might expect in JavaScript: `+`
 5.0 / 2.5 // 2
 ```
 
-At this point, we can fix the first few broken tests: we can define functions `add()`, `subtract()`, `multiply()`, `divide()` in `index.js`.
+At this point, we can fix the first _four_ broken tests: we can define functions `add()`, `subtract()`, `multiply()`, `divide()` in `index.js`.
 
 ## Math + Assignment
 
@@ -48,7 +50,7 @@ We can also put the incrementor and decrementor operations before the number:
 ++number // 5
 ```
 
-But generally, you will see them placed _after_ the number (and we recommend that that's where you put them).
+But generally, you will see them placed _after_ the number (and we recommend that that's where you put them). If you're interested in the difference, take a look [here](http://jsforallof.us/2014/07/10/pre-increment-vs-post-increment/)
 
 And, while we're on the subject, you'll usually only want to use these incrementors and decrementors when the shorthand makes what you're writing easier to read (more on when _exactly_ later). Instead, it's best to use the basic arithmetic operators combined with `=`. For the examples below, assume that `number` is equal to `5` (and resets for every example).
 
@@ -111,7 +113,7 @@ console.log(number) // 5
 
 **Because these methods are more explicit, prefer `+=` to `++` and `-=` to `--` (usually).**
 
-Okay, now we're ready to write solutions for `inc(n)` and `dec(n)`.
+Okay, now we're ready to write solutions for the next two functions: `inc(n)` and `dec(n)`.
 
 ## Parsing Numbers
 
@@ -155,7 +157,8 @@ Unlike `parseInt()`, `parseFloat()` accepts only a single argument, the thing to
 parseFloat('80.123999') // 80.123999
 ```
 
-You're now ready to solve the final tests in this lab, `makeInt(n)` and `preserveDecimal(n)`.
+You're now ready to solve the final two tests in this lab, `makeInt(n)` and `preserveDecimal(n)`.
+
 
 ## Resources
 
