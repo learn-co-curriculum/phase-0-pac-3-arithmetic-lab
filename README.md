@@ -20,7 +20,7 @@ The most fundamental math operations work as one might expect in JavaScript: `+`
 ``` javascript
 1 + 80 // 81
 60 - 40 // 20
-2 * 3.4 // 7.1999999999999 (there's that floating-point arithmetic again...)
+2 * 3.4 // 6.8 (there's that floating-point arithmetic again...)
 5.0 / 2.5 // 2
 ```
 
@@ -78,7 +78,7 @@ number *= 10 // 50
 number /= 5 // 1
 ```
 
-The thing to remember about these methods is that they modify the variable in place. So if we have two functions that depend on the same external variable, they order in which they're called matters. Follow along in console:
+The thing to remember about these methods is that they modify the variable in place. So if we have two functions that depend on the same external variable, the order in which they're called matters. Follow along in console:
 
 ``` javascript
 var number = 10
@@ -165,3 +165,5 @@ You're now ready to solve the final two tests in this lab, `makeInt(n)` and `pre
 - `parseInt()`: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 
 - `parseFloat()`: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/javascript-arithmetic-lab'>JavaScript Arithmetic Lab</a> on Learn.co and start learning to code for free.</p>
