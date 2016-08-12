@@ -20,7 +20,7 @@ The most fundamental math operations work as one might expect in JavaScript: `+`
 ``` javascript
 1 + 80 // 81
 60 - 40 // 20
-2 * 3.4 // 7.1999999999999 (there's that floating-point arithmetic again...)
+2 * 3.4 // 6.8 (there's that floating-point arithmetic again...)
 5.0 / 2.5 // 2
 ```
 
