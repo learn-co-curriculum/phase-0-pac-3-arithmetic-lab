@@ -111,7 +111,7 @@ divideBy3()
 console.log(number) // 5
 ```
 
-**Because these methods are more explicit, prefer `+=` to `++` and `-=` to `--` (usually).**
+**Because these methods are more explicit, we prefer `+=` to `++` and `-=` to `--` (usually).**
 
 Okay, now we're ready to write solutions for the next two functions: `inc(n)` and `dec(n)`.
 
