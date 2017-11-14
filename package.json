@@ -2,10 +2,6 @@
   "name": "java-script-arithmetic-lab",
   "version": "0.1.0",
   "description": "Practice defining functions and operating on numbers in JavaScript",
-  "engines": {
-    "node": "6.x",
-    "npm": "3.x"
-  },
   "main": "index.js",
   "scripts": {
     "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
