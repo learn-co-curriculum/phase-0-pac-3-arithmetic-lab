@@ -50,7 +50,7 @@ We can also put the incrementor and decrementor operations before the number:
 ++number // 5
 ```
 
-But generally, you will see them placed _after_ the number (and we recommend that that's where you put them). If you're interested in the difference, take a look [here](http://jsforallof.us/2014/07/10/pre-increment-vs-post-increment/)
+But generally, you will see them placed _after_ the number (and we recommend that that's where you put them). If you're interested in the difference, take a look [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)
 
 And, while we're on the subject, you'll usually only want to use these incrementors and decrementors when the shorthand makes what you're writing easier to read (more on when _exactly_ later). Instead, it's best to use the basic arithmetic operators combined with `=`. For the examples below, assume that `number` is equal to `5` (and resets for every example).
 
