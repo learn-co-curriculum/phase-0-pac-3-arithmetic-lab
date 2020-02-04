@@ -5,29 +5,50 @@ beforeEach(function() {
   b = Math.floor(Math.random() * 1000)
 })
 
-it('add(a, b) adds two numbers and returns the result', function() {
-  expect(add(a, b)).toEqual(a + b)
+describe('basic math functions', function () {
+  it("'add()' is a valid function", function() {
+    expect(add).toExist
+  })
+
+  it("'subtract()' is a valid function", function() {
+    expect(add).toExist
+  })
+
+  it("'multiple()' is a valid function", function() {
+    expect(add).toExist
+  })
+
+  it("'divide()' is a valid function", function() {
+    expect(add).toExist
+  })
+
+  it('add(a, b) adds two numbers and returns the result', function() {
+    expect(add(a, b)).toEqual(a + b)
+  })
+  
+  it('subtract(a, b) subtracts b from a and returns the result', function() {
+    expect(subtract(a, b)).toEqual(a - b)
+  })
+  
+  it('multiply(a, b) multiplies two numbers and returns the result', function() {
+    expect(multiply(a, b)).toEqual(a * b)
+  })
+  
+  it('divide(a, b) divides a by b and returns the result', function() {
+    expect(divide(a, b)).toEqual(a / b)
+  })
+  
+  it('increment(n) increments n and returns the result', function() {
+    expect(increment(a)).toEqual(a + 1)
+  })
+  
+  it('decrement(n) decrements n and returns the result', function() {
+    expect(decrement(a)).toEqual(a - 1)
+  })
 })
 
-it('subtract(a, b) subtracts b from a and returns the result', function() {
-  expect(subtract(a, b)).toEqual(a - b)
-})
 
-it('multiply(a, b) multiplies two numbers and returns the result', function() {
-  expect(multiply(a, b)).toEqual(a * b)
-})
 
-it('divide(a, b) divides a by b and returns the result', function() {
-  expect(divide(a, b)).toEqual(a / b)
-})
-
-it('inc(n) increments n and returns the result', function() {
-  expect(inc(a)).toEqual(a + 1)
-})
-
-it('dec(n) decrements n and returns the result', function() {
-  expect(dec(a)).toEqual(a - 1)
-})
 
 describe('makeInt(n)', function() {
   it('parses n as an integer and returns the parsed integer', function() {
