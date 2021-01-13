@@ -221,6 +221,22 @@ You're now ready to solve the final two tests in this lab, `makeInt(string)` and
 into a base 10 integer and return it. `preserveDecimal(string)` should take in
 a string, parse it into a float and return it.
 
+## Saving Your Work Remotely
+
+Currently, the work you've done on this assignmnent is only on your local
+machine. To preserve your solution on your GitHub fork, you will need to stage the
+changes you've made, commit them, and push the commit up to GitHub. Use
+the following commands to do this:
+
+```sh
+git add .
+git commit -m "Completed assignment"
+git push
+```
+
+If you visit your fork on GitHub, you should now see that _you've_ made the most
+recent commit, and your code will be present in the files.
+
 ## Resources
 
 - [MDN - parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
