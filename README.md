@@ -49,8 +49,7 @@ embedded terminal below or open repl.it in a separate window if you prefer.
 At this point, we can fix the first _eight_ failing tests: we can define
 functions `add()`, `subtract()`, `multiply()`, and `divide()` in `index.js`.
 
-**Top Tip**: you can also _define and run functions_ in the REPL terminal. Try
-writing your `add()` function in the terminal first to see how it works.
+> **Top Tip**: you can also _define and run functions_ in the REPL terminal. Try writing your `add()` function in the terminal first to see how it works.
 
 ## Math + Assignment
 
