@@ -11,7 +11,7 @@
 In this lab, we're going to practice writing functions and manipulating numbers
 in JavaScript. First, though, we need to review some basic math. In this lab,
 we're going to learn about various arithmetic operators. What's an operator, you
-say? It's a symbol that _operates_ on one or more (usually two) objects &mdash;
+say? It's a symbol that _operates_ on one or more (usually two) objects —
 `+` is a good example. The `+` operator says "add what's to the left of `+` and
 what's to the right of `+` together."
 
@@ -186,7 +186,7 @@ forces the parsed number to be an integer — which makes sense when we think
 about it, right?
 
 What happens, though, if we pass utter nonsense to `parseInt()`? Go ahead and
-try it &mdash; something like:
+try it — something like:
 
 ``` javascript
 parseInt('nonsense!', 10);
