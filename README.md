@@ -37,7 +37,7 @@ the prompt and it will be immediately executed when you hit enter. Give it a
 try: type each of the following math examples into the terminal. You can use the
 embedded terminal below or open repl.it in a separate window if you prefer.
 
-``` javascript
+```javascript
 1 + 80; //=> 81
 60 - 40; //=> 20
 2 * 3.4; //=> 6.8
@@ -56,7 +56,7 @@ functions `add()`, `subtract()`, `multiply()`, and `divide()` in `index.js`.
 Recall that we can increment (`++`) and decrement (`--`) a number if it's
 assigned to a variable. Don't forget to follow along in the REPL's terminal.
 
-``` javascript
+```javascript
 let number = 5;
 
 number++; //=> 5... hmmmm
@@ -70,7 +70,7 @@ number; //=> 5
 
 We can also put the incrementor and decrementor operations before the number, in which case the number is evaluated _after_ the operator is executed:
 
-``` javascript
+```javascript
 --number; //=> 4
 
 number; //=> 4
@@ -97,44 +97,44 @@ previous examples. Start by setting `number` equal to 5.
   the operator's right:
 
 ```javascript
-number += 3 //=> 8
+number += 3; //=> 8
 ```
 
 - `-=` modifies the value to the operator's left by subtracting from it the
   value to the operator's right:
 
-``` javascript
-number -= 2 //=> 6
+```javascript
+number -= 2; //=> 6
 ```
 
 - `*=` modifies the value to the operator's left by multiplying it by the value
   to the operator's right:
 
-``` javascript
-number *= 10 //=> 60
+```javascript
+number *= 10; //=> 60
 ```
 
 - `/=` modifies the value to the operator's left by dividing it by the value to
   the operator's right:
 
-``` javascript
-number /= 5 //=> 12
+```javascript
+number /= 5; //=> 12
 ```
 
 Note that these methods modify the variable in place. So, if we have two
 functions that depend on the same external variable, the order in which they are
 called matters. Follow along in the terminal:
 
-``` javascript
+```javascript
 //reset number
-number = 10
+number = 10;
 
 function add5() {
-  return number += 5;
+  return (number += 5);
 }
 
 function divideBy3() {
-  return number /= 3;
+  return (number /= 3);
 }
 
 divideBy3(); //=> 3.3333333333333335
@@ -142,7 +142,7 @@ divideBy3(); //=> 3.3333333333333335
 add5(); //=> 8.333333333333334
 
 // reset number
-number = 10
+number = 10;
 
 add5(); //=> 15
 
@@ -170,15 +170,15 @@ the value to parse and the base of the value being parsed (called the _radix_).
 _Usually_ you will want to work with base 10, so a typical call to `parseInt()`
 looks like:
 
-``` javascript
-parseInt('2', 10); //=> 2
+```javascript
+parseInt("2", 10); //=> 2
 ```
 
 What happens if we pass a representation of a non-integer to `parseInt()`? Let's
 try it:
 
-``` javascript
-parseInt('2.2222', 10);
+```javascript
+parseInt("2.2222", 10);
 ```
 
 If we enter the above in the REPL's terminal, we will see that `parseInt()`
@@ -188,8 +188,8 @@ about it, right?
 What happens, though, if we pass utter nonsense to `parseInt()`? Go ahead and
 try it — something like:
 
-``` javascript
-parseInt('nonsense!', 10);
+```javascript
+parseInt("nonsense!", 10);
 ```
 
 What did it return? `NaN`? What is that?
@@ -211,8 +211,8 @@ only returns integers. If we want to preserve decimals, we'll need to use
 Unlike `parseInt()`, `parseFloat()` accepts only a single argument, the thing to
 be parsed. We can use it like so:
 
-``` javascript
-parseFloat('80.123999'); // 80.123999
+```javascript
+parseFloat("80.123999"); // 80.123999
 ```
 
 You're now ready to solve the final two tests in this lab, `makeInt(string)` and
@@ -227,10 +227,10 @@ machine. To preserve your solution on your GitHub fork, you will need to stage t
 changes you've made, commit them, and push the commit up to GitHub. Use
 the following commands to do this:
 
-```sh
-git add .
-git commit -m "Completed assignment"
-git push
+```console
+$ git add .
+$ git commit -m "Completed assignment"
+$ git push
 ```
 
 If you visit your fork on GitHub, you should now see that _you've_ made the most
