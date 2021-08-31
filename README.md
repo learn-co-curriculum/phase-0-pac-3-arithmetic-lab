@@ -1,6 +1,6 @@
 # JavaScript Calculator Challenge Lab
 
-## Objectives
+## Learning Goals
 
 - Practice doing math with JavaScript
 - Practice writing functions that do things with numbers
