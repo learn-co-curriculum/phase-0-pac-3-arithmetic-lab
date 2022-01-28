@@ -30,9 +30,11 @@ The most fundamental math operations work as one might expect in JavaScript: `+`
 adds two numbers; `-` subtracts one number from another; `*` multiplies two
 numbers; and `/` divides one number by another.
 
-To follow along with the examples in this lesson, type each of the following
-math examples into the repl console. You can use the embedded console below or
-open [repl.it][] in a separate window if you prefer.
+To follow along with the examples in this lesson, we'll be using the _terminal
+window_ in [repl.it][]. You can type any JavaScript statement or expression at
+the prompt and it will be immediately executed when you hit enter. Give it a
+try: type each of the following math examples into the terminal. You can use the
+embedded terminal below or open repl.it in a separate window if you prefer.
 
 ```javascript
 1 + 80; //=> 81
