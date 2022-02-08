@@ -30,11 +30,9 @@ The most fundamental math operations work as one might expect in JavaScript: `+`
 adds two numbers; `-` subtracts one number from another; `*` multiplies two
 numbers; and `/` divides one number by another.
 
-To follow along with the examples in this lesson, we'll be using the _terminal
-window_ in [repl.it][]. You can type any JavaScript statement or expression at
-the prompt and it will be immediately executed when you hit enter. Give it a
-try: type each of the following math examples into the terminal. You can use the
-embedded terminal below or open repl.it in a separate window if you prefer.
+Give it a try: type each of the following math examples into the REPL console.
+You can use the embedded console below or open [replit][] in a separate window
+if you prefer.
 
 ```javascript
 1 + 80; //=> 81
@@ -43,18 +41,18 @@ embedded terminal below or open repl.it in a separate window if you prefer.
 5.0 / 2.5; //=> 2
 ```
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/ConstantLoathsomeToolbox?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 At this point, we can fix the first _eight_ failing tests: we can define
 functions `add()`, `subtract()`, `multiply()`, and `divide()` in `index.js`.
 
-> **Top Tip**: you can also _define and run functions_ in the REPL terminal. Try
-> writing your `add()` function in the terminal first to see how it works.
+> **Top Tip**: you can also _define and run functions_ in the REPL console. Try
+> writing your `add()` function in the console first to see how it works.
 
 ## Math + Assignment
 
 Recall that we can increment (`++`) and decrement (`--`) a number if it's
-assigned to a variable. Don't forget to follow along in the REPL's terminal.
+assigned to a variable. Don't forget to follow along in the REPL console.
 
 ```javascript
 let number = 5;
@@ -68,7 +66,7 @@ number--; //=> 6
 number; //=> 5
 ```
 
-We can also put the incrementor and decrementor operations before the number, in
+We can also put the increment and decrement operators before the number, in
 which case the number is evaluated _after_ the operator is executed:
 
 ```javascript
@@ -91,7 +89,7 @@ incrementors and decrementors when the shorthand makes what you're writing
 easier to read (more on when _exactly_ in a later lesson). Instead, it's best to
 use the basic arithmetic operators combined with `=`.
 
-Follow along in the terminal's REPL. You can pick up where we left off with the
+Follow along in the REPL console. You can pick up where we left off with the
 previous examples. Start by setting `number` equal to 5.
 
 - `+=` modifies the value to the operator's left by adding to it the value to
@@ -124,7 +122,7 @@ number /= 5; //=> 12
 
 Note that these methods modify the variable in place. So, if we have two
 functions that depend on the same external variable, the order in which they are
-called matters. Follow along in the terminal:
+called matters. Follow along in the console:
 
 ```javascript
 //reset number
@@ -182,9 +180,9 @@ try it:
 parseInt("2.2222", 10);
 ```
 
-If we enter the above in the REPL's terminal, we will see that `parseInt()`
-forces the parsed number to be an integer — which makes sense when we think
-about it, right?
+If we enter the above in the REPL console, we will see that `parseInt()` forces
+the parsed number to be an integer — which makes sense when we think about it,
+right?
 
 What happens, though, if we pass utter nonsense to `parseInt()`? Go ahead and
 try it — something like:
@@ -227,4 +225,4 @@ a string, parse it into a float and return it.
 
 - [MDN - parseFloat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
 
-[repl.it]: https://repl.it/languages/javascript
+[replit]: https://replit.com/languages/javascript
