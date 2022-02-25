@@ -149,6 +149,25 @@ function add(a, b) {
 
 With this code, both tests for the `add()` function should now be passing!
 
+### A Quick Note about Hard Coding
+
+Think back to the errors we were getting above, e.g., `Expected undefined to
+equal 1078`. One thing that might be tempting to do when addressing an error
+like this is to explicitly return exactly what the test is looking for:
+
+```js
+function add(a, b) {
+  return 1078;
+}
+```
+
+This is what's known as **hard coding** and is virtually never what you should
+do! If you think about it, it doesn't really make sense. We've created an
+`add()` function that can take any two numbers as arguments but will always
+return 1078. This makes it a pretty useless function. Instead, we want to create
+functions that will return the correct answer for whatever argument or arguments
+we pass in.
+
 Go ahead and tackle the next three tests on your own. You should follow a
 process very similar to what we did above. Once you have those passing, continue
 to the next section.
