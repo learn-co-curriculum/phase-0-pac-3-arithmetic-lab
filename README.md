@@ -43,11 +43,134 @@ if you prefer.
 
 <iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-At this point, we can fix the first _eight_ failing tests: we can define
-functions `add()`, `subtract()`, `multiply()`, and `divide()` in `index.js`.
+Go ahead and run `learn test` and take a look at the first failing test:
 
-> **Top Tip**: you can also _define and run functions_ in the REPL console. Try
-> writing your `add()` function in the console first to see how it works.
+```console
+  1) basic math functions
+       'add()' is a valid function:
+     ReferenceError: add is not defined
+      at Context.<anonymous> (test/index-test.js:10:12)
+      at processImmediate (node:internal/timers:464:21)
+```
+
+The description of the test, `'add()' is a valid function`, along with the error
+message, `referenceError: add is not defined`, tells us that we need to define a
+function `add()`. Go ahead and create the `add()` function in `index.js`. This
+test is only looking for the function to exist, so we can leave the code block
+empty for now:
+
+```js
+function add() {
+  // we'll fill this in shortly
+}
+```
+
+Once you've added the empty function, run `learn test` again; the first test
+should be passing. Go ahead and get the next three tests passing as well before
+moving on.
+
+Once you have the first four tests passing, the first error you get should look
+similar to this:
+
+```js
+  1) basic math functions
+       add(a, b) adds two numbers and returns the result:
+     Error: Expected undefined to equal 1078
+      at assert (node_modules/expect/lib/assert.js:29:9)
+      at Expectation.toEqual (node_modules/expect/lib/Expectation.js:81:30)
+      at Context.<anonymous> (test/index-test.js:26:23)
+      at processImmediate (node:internal/timers:464:21)
+```
+
+> Note: the test document is randomly creating numbers to pass as arguments to
+> the functions in this lab, so the specific values you see in your errors will
+> be different from what's shown in this lesson, and will be different each time
+> you run the tests!
+
+The tests have found our `add()` function, getting us past the first test, and
+now we need to write the code inside the function to return what the test is
+expecting. Let's break down the information from our error:
+
+```js
+add(a, b) adds two numbers and returns the result:
+Error: Expected undefined to equal 1078
+```
+
+The first line tells us what our function needs to do, and the second line tells
+us the specific error that is being thrown. Any time you see the error "Expected
+undefined to equal" something, that means the test is expecting your function to
+_return_ a value but it's currently not returning anything (`undefined`). Let's
+see if we can just get that specific error cleared. We won't worry about exactly
+_what_ we're returning just yet:
+
+```js
+function add() {
+  return "something";
+}
+```
+
+Running the tests now we get:
+
+```console
+  1) basic math functions
+       add(a, b) adds two numbers and returns the result:
+     Error: Expected 'something' to equal 853
+      at assert (node_modules/expect/lib/assert.js:29:9)
+      at Expectation.toEqual (node_modules/expect/lib/Expectation.js:81:30)
+      at Context.<anonymous> (test/index-test.js:26:23)
+      at processImmediate (node:internal/timers:464:21)
+```
+
+Great! So now our function is returning "something" instead of nothing! So the
+next step is to look more closely at the test's description of the function to
+figure out what should be returned:
+
+```console
+add(a, b) adds two numbers and returns the result
+```
+
+The `add(a, b)` tells us the test is trying to pass two _arguments_ to our
+function, so let's get that set up:
+
+```js
+function add(a, b) {
+  return "something";
+}
+```
+
+The rest of the description tells us we need to add the two arguments together
+and return that value:
+
+```js
+function add(a, b) {
+  return a + b;
+}
+```
+
+With this code, both tests for the `add()` function should now be passing!
+
+### A Quick Note about Hard Coding
+
+Think back to the errors we were getting above, e.g., `Expected undefined to
+equal 1078`. One thing that might be tempting to do when addressing an error
+like this is to explicitly return exactly what the test is looking for:
+
+```js
+function add(a, b) {
+  return 1078;
+}
+```
+
+This is what's known as **hard coding** and is virtually never what you should
+do! If you think about it, it doesn't really make sense. We've created an
+`add()` function that can take any two numbers as arguments but will always
+return 1078. This makes it a pretty useless function. Instead, we want to create
+functions that will return the correct answer for whatever argument or arguments
+we pass in.
+
+Go ahead and tackle the next three tests on your own. You should follow a
+process very similar to what we did above. Once you have those passing, continue
+to the next section.
 
 ## Math + Assignment
 
@@ -81,8 +204,7 @@ number; //=> 5
 
 But generally, you will see them placed _after_ the number (and we recommend
 that that's where you put them). If you're interested in the difference, take a
-look at
-[the documentation on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment).
+look at the [MDN documentation][].
 
 And, while we're on the subject, you'll usually only want to use these
 incrementors and decrementors when the shorthand makes what you're writing
@@ -152,8 +274,9 @@ divideBy3(); //=> 5
 `--` (usually).**
 
 Okay, now we're ready to write solutions for the next two functions:
-`increment(n)` and `decrement(n)`. These methods should take in a number, and
-increment/decrement the provided value by one, returning the result.
+`increment(n)` and `decrement(n)`. As indicated by the tests, these methods
+should take a number as an argument, increment/decrement the provided value by
+one, and return the result.
 
 ## Parsing Numbers
 
@@ -214,10 +337,11 @@ be parsed. We can use it like so:
 parseFloat("80.123999"); // 80.123999
 ```
 
-You're now ready to solve the final two tests in this lab, `makeInt(string)` and
-`preserveDecimal(string)`. `makeInt(string)` should take in a string, parse it
-into a base 10 integer and return it. `preserveDecimal(string)` should take in
-a string, parse it into a float and return it.
+You now have the information you need to write the final two functions,
+`makeInt(string)` and `preserveDecimal(string)`. `makeInt(string)` should take
+in a string, parse it into a base 10 integer and return it.
+`preserveDecimal(string)` should take in a string, parse it into a float and
+return it.
 
 ## Resources
 
@@ -226,3 +350,4 @@ a string, parse it into a float and return it.
 - [MDN - parseFloat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
 
 [replit]: https://replit.com/languages/javascript
+[MDN documentation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment
