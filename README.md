@@ -70,7 +70,7 @@ should be passing. Go ahead and get the next three tests passing as well before
 moving on.
 
 Once you have the first four tests passing, the first error you get should look
-like this:
+similar to this:
 
 ```js
   1) basic math functions
@@ -81,6 +81,11 @@ like this:
       at Context.<anonymous> (test/index-test.js:26:23)
       at processImmediate (node:internal/timers:464:21)
 ```
+
+> Note: the test document is randomly creating numbers to pass as arguments to
+> the functions in this lab, so the specific values you see in your errors will
+> be different from what's shown in this lesson, and will be different each time
+> you run the tests!
 
 The tests have found our `add()` function, getting us past the first test, and
 now we need to write the code inside the function to return what the test is
