@@ -41,7 +41,7 @@ if you prefer.
 5.0 / 2.5; //=> 2
 ```
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Go ahead and run `learn test` and take a look at the first failing test:
 
