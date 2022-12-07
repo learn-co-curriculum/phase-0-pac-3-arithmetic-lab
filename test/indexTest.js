@@ -1,3 +1,5 @@
+require ( './root.js' );
+
 var a, b
 
 beforeEach(function() {
