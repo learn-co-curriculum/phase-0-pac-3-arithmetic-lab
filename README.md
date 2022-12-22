@@ -16,13 +16,15 @@ say? It's a symbol that _operates_ on one or more (usually two) objects —
 what's to the right of `+` together."
 
 If you haven't already, fork and clone this lab into your local environment.
-Navigate into its directory in the terminal, then run `code .` to open the files
-in Visual Studio Code. (If you are using a different text editor, the command
-will be different.)
+Remember to **fork** a copy into your GitHub account first, then clone from that
+copy. Once you've cloned it down, navigate into its directory in the terminal,
+then run `code .` to open the files in Visual Studio Code. (If you are using a
+different text editor, the command will be different.)
 
 As you read through this lesson, you're going to be adding your solutions to
 `index.js`. You'll write a total of eight functions. Use the results of running
-`learn test` to guide you towards the right function names and functionality.
+`npm test` to guide you towards the right function names and functionality.
+Remember to run `npm install` first to install the dependencies.
 
 ## Basic Math
 
@@ -43,13 +45,13 @@ if you prefer.
 
 <iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Go ahead and run `learn test` and take a look at the first failing test:
+Go ahead and run `npm test` and take a look at the first failing test:
 
 ```console
   1) basic math functions
        'add()' is a valid function:
      ReferenceError: add is not defined
-      at Context.<anonymous> (test/index-test.js:10:12)
+      at Context.<anonymous> (test/indexTest.js:10:12)
       at processImmediate (node:internal/timers:464:21)
 ```
 
@@ -65,7 +67,7 @@ function add() {
 }
 ```
 
-Once you've added the empty function, run `learn test` again; the first test
+Once you've added the empty function, run `npm test` again; the first test
 should be passing. Go ahead and get the next three tests passing as well before
 moving on.
 
@@ -78,7 +80,7 @@ similar to this:
      Error: Expected undefined to equal 1078
       at assert (node_modules/expect/lib/assert.js:29:9)
       at Expectation.toEqual (node_modules/expect/lib/Expectation.js:81:30)
-      at Context.<anonymous> (test/index-test.js:26:23)
+      at Context.<anonymous> (test/indexTest.js:26:23)
       at processImmediate (node:internal/timers:464:21)
 ```
 
@@ -117,7 +119,7 @@ Running the tests now we get:
      Error: Expected 'something' to equal 853
       at assert (node_modules/expect/lib/assert.js:29:9)
       at Expectation.toEqual (node_modules/expect/lib/Expectation.js:81:30)
-      at Context.<anonymous> (test/index-test.js:26:23)
+      at Context.<anonymous> (test/indexTest.js:26:23)
       at processImmediate (node:internal/timers:464:21)
 ```
 
