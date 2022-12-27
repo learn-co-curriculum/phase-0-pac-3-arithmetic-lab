@@ -345,6 +345,14 @@ in a string, parse it into a base 10 integer and return it.
 `preserveDecimal(string)` should take in a string, parse it into a float and
 return it.
 
+After you have all the tests passing, remember to commit and push your changes
+up to GitHub, then submit your work to Canvas using CodeGrade. If you need a
+reminder, go back to the [Complete Your First Software Engineering
+Assignment][complete-assignment] lesson to review the process.
+
+[complete-assignment]: https://github.com/learn-co-curriculum/phase-0-completing-assignments-codegrade
+
+
 ## Resources
 
 - [MDN - parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
