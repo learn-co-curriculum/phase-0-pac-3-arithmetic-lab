@@ -32,9 +32,7 @@ The most fundamental math operations work as one might expect in JavaScript: `+`
 adds two numbers; `-` subtracts one number from another; `*` multiplies two
 numbers; and `/` divides one number by another.
 
-Give it a try: type each of the following math examples into the REPL console.
-You can use the embedded console below or open [replit][] in a separate window
-if you prefer.
+Give it a try: type each of the following math examples into your terminal prompt after using the `node` command.
 
 ```javascript
 1 + 80; //=> 81
@@ -43,8 +41,7 @@ if you prefer.
 5.0 / 2.5; //=> 2
 ```
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
+You can then exit the node prompt using `.exit` then navigate back to the lab directory in your terminal if necessary.
 Go ahead and run `npm test` and take a look at the first failing test:
 
 ```console
@@ -177,7 +174,7 @@ to the next section.
 ## Math + Assignment
 
 Recall that we can increment (`++`) and decrement (`--`) a number if it's
-assigned to a variable. Don't forget to follow along in the REPL console.
+assigned to a variable. Please follow along in the terminal using the `node` command.
 
 ```javascript
 let number = 5;
@@ -213,7 +210,7 @@ incrementors and decrementors when the shorthand makes what you're writing
 easier to read (more on when _exactly_ in a later lesson). Instead, it's best to
 use the basic arithmetic operators combined with `=`.
 
-Follow along in the REPL console. You can pick up where we left off with the
+Follow along in the terminal. You can pick up where we left off with the
 previous examples. Start by setting `number` equal to 5.
 
 - `+=` modifies the value to the operator's left by adding to it the value to
@@ -246,7 +243,7 @@ number /= 5; //=> 12
 
 Note that these methods modify the variable in place. So, if we have two
 functions that depend on the same external variable, the order in which they are
-called matters. Follow along in the console:
+called matters. Follow along in the terminal:
 
 ```javascript
 //reset number
